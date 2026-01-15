@@ -10,12 +10,6 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-/*
-  On prend les utilisateurs
-  qui ne sont PAS :
-  - toi
-  - déjà tes amis
-*/
 $sql = "
 SELECT u.id, u.name
 FROM users u
