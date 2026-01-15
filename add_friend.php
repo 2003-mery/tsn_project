@@ -1,22 +1,22 @@
 <?php
 session_start();
-include 'config.php';
+include "config.php";
 
-$userId = $_SESSION['user_id'];
-$friendId = $_GET['id'];
+$user_id = $_SESSION['user_id'];
+$friend_id = $_GET['id'];
 
-/* Empêcher l’auto-ajout */
-if ($userId != $friendId) {
+/* éviter doublon */
+$check = $conn->query("
+    SELECT * FROM friends 
+    WHERE user_id=$user_id AND friend_id=$friend_id
+");
 
-    // Vérifier si la relation existe déjà
-    $check = $conn->query("SELECT * FROM friends 
-                           WHERE user_id=$userId AND friend_id=$friendId");
-
-    if ($check->num_rows == 0) {
-        $conn->query("INSERT INTO friends (user_id, friend_id)
-                      VALUES ($userId, $friendId)");
-    }
+if ($check->num_rows == 0) {
+    $conn->query("
+        INSERT INTO friends (user_id, friend_id, status)
+        VALUES ($user_id, $friend_id, 'pending')
+    ");
 }
 
-header("Location: index.php?friend=added");
-
+header("Location: recommendation.php");
+exit;
