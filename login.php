@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Connexion</title>
+<title>Log in</title>
 
 <style>
 * {
@@ -121,7 +121,7 @@ body {
 <body>
 
 <div class="login-box">
-    <h2>Connexion</h2>
+    <h2>Log in</h2>
 
     <?php if (isset($error)): ?>
         <div class="error"><?= htmlspecialchars($error) ?></div>
@@ -134,7 +134,7 @@ body {
     </form>
 
     <div class="links">
-        <a href="/tsn_project/add_user.php" class="register-btn">Créer un compte</a>
+        <a href="/tsn_project/add_user.php" class="register-btn">Create account</a>
     </div>
 </div>
 

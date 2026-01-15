@@ -26,7 +26,7 @@ $result = $conn->query($sql);
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Suggestions d'amis</title>
+<title>Suggestes friends</title>
 
 <style>
 .container {
@@ -88,7 +88,7 @@ $result = $conn->query($sql);
 <body>
 
 <div class="container">
-    <h2>Suggestions d'amis</h2>
+    <h2>Suggested friends</h2>
 
     <div class="grid">
         <?php while ($row = $result->fetch_assoc()): ?>
@@ -100,7 +100,7 @@ $result = $conn->query($sql);
                 <h3><?= htmlspecialchars($row['name']) ?></h3>
 
                 <a class="add" href="add_friend.php?id=<?= $row['id'] ?>">
-                    Ajouter ami
+                    Add friend
                 </a>
 
             </div>

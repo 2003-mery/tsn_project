@@ -90,7 +90,7 @@ a:hover {
 <div class="container">
 
 <div class="card">
-    <h2>Mon profil</h2>
+    <h2>My profile</h2>
 
     <img src="uploads/profile_pics/<?= htmlspecialchars($user['profile_pic']) ?>"
          alt="Photo de profil"
@@ -99,7 +99,7 @@ a:hover {
     <form action="upload_profile_pic.php" method="POST" enctype="multipart/form-data">
         <input type="file" name="profile_pic" accept="image/*" required>
         <br><br>
-        <button class="btn" type="submit">Changer la photo</button>
+        <button class="btn" type="submit">Change photo</button>
     </form>
 
     <div class="profile-info">
@@ -111,7 +111,7 @@ a:hover {
 
 
 <div class="card">
-    <h3>Demandes d'amis</h3>
+    <h3>friend requests</h3>
 
     <?php
     $res = $conn->query("
@@ -138,7 +138,7 @@ a:hover {
 </div>
 
 <div class="card">
-    <h3>Mes amis</h3>
+    <h3>My friends</h3>
 
     <?php
     $user_id = $_SESSION['user_id'];

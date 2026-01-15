@@ -141,7 +141,7 @@ if (isset($_GET['friend']) && $_GET['friend'] == 'added') {
 }
 ?>
 
-<h2>Vos publications</h2>
+<h2>Your posts</h2>
 
 <div class="search-box">
     <form method="GET">
@@ -198,14 +198,14 @@ while ($post = $resultPosts->fetch_assoc()) {
 </div>
 
 <div class="new-post">
-    <h3>Nouvelle publication</h3>
+    <h3>New post</h3>
 
     <form method="POST" action="add_post.php" enctype="multipart/form-data">
         <textarea name="content" placeholder="Quoi de neuf ?" required></textarea>
 
         <input type="file" name="image" accept="image/*">
 
-        <button type="submit">Publier</button>
+        <button type="submit">Publish</button>
     </form>
 </div>
 

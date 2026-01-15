@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Créer un compte</title>
+<title>Create account</title>
 
 <style>
 * {
@@ -110,7 +110,7 @@ body {
 
 <div class="register-container">
     <div class="register-box">
-        <h2>Créer un compte</h2>
+        <h2>Create account</h2>
 
         <form method="post">
             <input name="name" placeholder="Nom complet" required>

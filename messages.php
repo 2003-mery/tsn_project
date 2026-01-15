@@ -93,7 +93,7 @@ body {
 <div class="title">Messages</div>
 
 <?php if ($result->num_rows == 0): ?>
-    <p>Aucun message</p>
+    <p>No message</p>
 <?php endif; ?>
 
 <?php while ($row = $result->fetch_assoc()): ?>

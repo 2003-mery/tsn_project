@@ -70,7 +70,7 @@ $notifCount = $conn->query("
     <a href="index.php" class="logo">Talky</a>
 
     <div class="nav">
-        <a href="index.php">Accueil</a>
+        <a href="index.php">Home</a>
 
         <a href="messages.php">
             Messages
@@ -92,7 +92,7 @@ $notifCount = $conn->query("
                 </span>
             <?php endif; ?>
         </a>
-        <a href="profile.php">Profil</a>
+        <a href="profile.php">Profile</a>
         <a href="recommendation.php">Suggestions</a>
         <a href="logout.php">Logout</a>
     </div>
