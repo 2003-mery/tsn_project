@@ -11,7 +11,7 @@ $user = $conn->query("SELECT * FROM users WHERE id=$id")->fetch_assoc();
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Mon profil</title>
+<title>My profile</title>
 
 <style>
 * {
