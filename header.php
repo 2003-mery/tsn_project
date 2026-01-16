@@ -59,11 +59,18 @@ if ($user_id) {
 }
 </style>
 <?php
-$notifCount = $conn->query("
-    SELECT COUNT(*) AS total
-    FROM notifications
-    WHERE user_id = {$_SESSION['user_id']} AND is_read = 0
-")->fetch_assoc()['total'];
+$notifCount = 0;
+
+if ($user_id) {
+    $result = $conn->query("
+        SELECT COUNT(*) AS total
+        FROM notifications
+        WHERE user_id = $user_id AND is_read = 0
+    ");
+    $row = $result->fetch_assoc();
+    $notifCount = $row['total'];
+}
+
 ?>
 
 <div class="header">
